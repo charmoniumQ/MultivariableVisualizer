@@ -1,0 +1,6 @@
+*.log
+*.aux
+-rw-r--r-- 1 sam sam  167 May 21 23:26 main.toc
+-rw-r--r-- 1 sam sam 7.0K May 21 23:26 main.pyg
+-rw-r--r-- 1 sam sam 4.5K May 21 23:26 main.tex
+-rw-r----- 1 sam sam 116K May 21 23:03 logo.png
