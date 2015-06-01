@@ -1,0 +1,21 @@
+\section{Frenet-Serret frames}
+
+The Frenet frame is a tool for understanding the local motion of a curve. The Frenet frame gives you an idea of where the function would be going if it were a straight line (tangent vector), which way the function would be bending if it were a circle (normal vector), and which way the function is twisting (binormal vector). Additional quantities like the curvature (related to the radius of the function if it were a circle) and the torsion (related to the angular momentum in the direction of the binormal vector).
+
+The input should be a regular path in real space. \(c(t) : [a, b] \to \mathrm R^3\).
+
+\begin{enumerate}
+%\item Unit parametrize the curve. Let the arc-length passed up as a function of time given by \(s(t)\) \(s(t) = \int\limits_0^t \|f'(t)\|\). It can be shown that \(s(t)\) always has an inverse \(s^{-1}(t)\) (See the appendix for proof). Then let \(f(s^{-1}(t)) = c(t)\).
+% TODO: link to appendix
+
+%Since \(s'(t) = \|f'(t)\|\) by the fundamental theorem, and the length of a vector must be positive, the \(s(t)\) must be monotonically increasing. All monotonically increasing functions are injective. Taking \(\cod f = \im f\), it must also be surjective. Therefore \(s(t)\) is always invertible.
+
+\item Calculate the unit tangent vector. Taylor's Theorem gives us \(c(t_0) + c'(t) \cdot (t - t_0) \approx c(t)\) for small \(\delta t\). A straight line starting at \(\vec{u}\) in the direction of \(\vec{v}\) is given by \(\vec{u} + \vec{v} \cdot t\). Therefore the line that locally approximates the function \(f\) is the first-order Taylor's Theorem. Since the tangent vector is relative to the point\(\vec{u} = \vec{0}\), and relative to the time \(t = 0\), and unit normalized, it is given by \(T(t) = \frac{c'(t)}{\|c'(t)\|}\).
+
+\item Calculate the unit normal vector. Let \(c(t)\) be approximated by a circle of radius \(r\) lying in the plane spanned by \(T(0)\) and \(N(0)\) (this vector is not yet known). \(c(t) \approx r T(0) \sin t + r N(0) \cos t\). Then \(c'(t) = r T(0) \cos t - r N(0) \sin t\) (the reader can verify that at \(t = 0\), the tangent vector is indeed \(T(0)\)). Then \(c''(t) = T'(t) = - r T(0) \sin t - r N(0) \cos t\). Therefore \(T'(0) = -rN(0)\) which points in the direction of the normal vector. Therefore the unit-normalized normal vector is given by \(N(t) = \frac{T'(t)}{\|T'(t)\|}\). % TODO: get rid of negative sign
+
+\item Calculate the curvature. \(\kappa(t) = \frac{1}{r}\) in the circle described by \(c(t) \approx r T(0) \sin t + r N(0) \cos t\). As previously shown, \(T'(0) = -r N(0)\). Therefore
+
+\item Calculate the binormal vector. In order to form an orthnormal basis, \(B(t) = T(t) \times N(t)\).
+
+\end{enumerate}
