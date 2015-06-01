@@ -6,6 +6,8 @@
 \usepackage[pdftex]{graphicx}
 \usepackage{fancyhdr}
 \usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{commath}
 \usepackage{lastpage}
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage{minted}
@@ -42,7 +44,7 @@
 
 \section*{Abstract}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare lobortis urna, quis aliquet nulla cursus interdum. Proin ac nisl sagittis, dignissim lorem et, blandit est. Fusce commodo dui at quam imperdiet, vitae consequat diam ornare. Pellentesque maximus mi id ex molestie, a laoreet enim varius. Vivamus est eros, semper vel nisl vitae, tristique dignissim eros. Duis eu tortor mi. In id tellus nec ipsum malesuada dictum. Nullam nibh dolor, vehicula vel malesuada id, ullamcorper quis mauris.
+Visualizing the concepts of multivariable calculus can be challenging. The students created several computer-generated visual models utilizing the Mathematica language. These models can be used as teaching aids for educators or extra instruction for students.
 
 \vspace*{\fill}
 
@@ -50,7 +52,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare lobortis 
 
 \section*{Acknowledgements}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare lobortis urna, quis aliquet nulla cursus interdum. Proin ac nisl sagittis, dignissim lorem et, blandit est. Fusce commodo dui at quam imperdiet, vitae consequat diam ornare.
+Thank you to Mrs. Harrelson for making a remarkable Multivariable Calculus class at LASA. This class is seriously the bomb if you like to think mathematically. We want to acknowledge the families of the students who have been incredibly supportive, even though they don't understand why we are doing this.
 
 \tableofcontents
 
@@ -58,18 +60,23 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare lobortis 
 
 \doublespacing
 
-\section{Lorem Ipsum}
+\section{Introduction}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ornare lobortis urna, quis aliquet nulla cursus interdum. Proin ac nisl sagittis, dignissim lorem et, blandit est. Fusce commodo dui at quam imperdiet, vitae consequat diam ornare. Pellentesque maximus mi id ex molestie, a laoreet enim varius. Vivamus est eros, semper vel nisl vitae, tristique dignissim eros. Duis eu tortor mi. In id tellus nec ipsum malesuada dictum. Nullam nibh dolor, vehicula vel malesuada id, ullamcorper quis mauris.
+ As students, we know that visualizing these topics can sometimes be pretty difficult. I may or may not be guilty, on occasion, of simply using these formulas without an understanding of what they really do. If only there were some means of playing around with these topics without having to imagine clear mountains with magical rings or bleeding, toilet paper pasted shaved faces (inside joke). We believe that we have created the solution!
 
-Quisque pulvinar rutrum sem. Sed id imperdiet urna. Morbi rhoncus ac odio quis condimentum. Pellentesque cursus magna sit amet ipsum congue faucibus. Fusce id pellentesque nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet lacinia arcu, at lobortis nunc. Vivamus eu ornare ante. Suspendisse ullamcorper, dolor nec lacinia posuere, neque arcu vestibulum risus, sed interdum arcu velit tincidunt magna. Fusce interdum eleifend mauris at gravida. Nullam sit amet tristique ligula, ac viverra orci. Vestibulum venenatis maximus nulla sit amet efficitur. Nulla et nisi consequat tellus condimentum accumsan. Vivamus a ornare nibh. Quisque quis dolor nisl.
+ The magic of Multivariable can be seen through the “Sam and Wilson’s 3D Multivariable Visualizer for Glazed-eyed LASA students” for a small fee of appreciation. The goals of this Visualizer are to allow students to interact with the topics discussed below and instead of telling the students  what the topics are, the Visualizer simply shows them. The topics would reveal themselves to even the most distant of students simply nodding their heads as asked (inside joke once more). We hope that you incorporate this Visualizer into your lessons and take advantage of the many opportunities that this opens up for students.
 
-Aliquam erat volutpat. Fusce id sollicitudin ante. Integer ut neque porttitor, sollicitudin lectus ut, aliquam eros. Nullam ac eros faucibus, egestas tellus ac, finibus turpis. Aliquam id odio vitae ligula pulvinar convallis. Ut nec nunc elit. Cras vehicula posuere erat sit amet sodales. Quisque ultrices imperdiet quam semper tincidunt.
+\section{Design Principles}
 
-\section{Nulla facilisi}
+\begin{enumerate}
+\item \textbf{Flexibility:} The same concept can be visualized on multiple examples, and we tried to make it so that the models can adjust at runtime to any user inputted example.
+\item \textbf{Interactivity:} The concepts are best illustrated when the user can tweak the values and adjust the parameters in a dynamic way that gives real-time feedback.
+\item \textbf{Maintainability:} The models \textit{look good}. They are designed to be very clean and adjustable. This means that the code may be less aligned with the mathematics, but it is worth it for ease of maintaning. This way, when we graduate the models may still be adapted to the cirriculum.
+\item \textbf{Instructiveness:} The models are not by themselves. They are accompanied by text % TODO: int his paper?
+explaining how they work and what they do.
+\end{enumerate}
 
-Nulla facilisi. Nullam urna lorem, vestibulum et purus vitae, euismod dignissim eros. Suspendisse potenti. Proin lectus mi, viverra eget ornare in, dapibus nec metus. Maecenas porta nec nibh non interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id consectetur sapien. Donec sit amet interdum eros. Maecenas dignissim tincidunt augue, ac ultricies nisi rutrum a. Nunc et ligula quis elit rhoncus pretium. Sed in tortor orci. Vivamus quam enim, molestie at ullamcorper eu, laoreet id ante. Aliquam vel tortor in enim volutpat feugiat non et orci. Morbi faucibus erat eros, non fermentum nunc molestie eget.
 
-In ut massa ut odio semper rhoncus eget at quam. Sed a metus faucibus, pretium enim nec, imperdiet erat. Sed id placerat nisi, sit amet blandit lacus. Fusce massa sapien, feugiat id magna id, pulvinar ultricies magna. Nullam ante sapien, eleifend at cursus vel, posuere non velit. Morbi eu auctor sem, sit amet accumsan erat. Sed ut maximus ipsum, vitae rutrum ante. In sed nisi vehicula, viverra magna id, volutpat nibh. Nullam pharetra auctor ornare. In hac habitasse platea dictumst. Fusce nec mauris ac ipsum aliquam condimentum.
+
 
 \end{document}
