@@ -1,0 +1,149 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4439,        139]
+NotebookOptionsPosition[      4198,        126]
+NotebookOutlinePosition[      4540,        141]
+CellTagsIndexPosition[      4497,        138]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"electricfield", "[", "point_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"Normalize", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y", ",", "z"}], "}"}], "-", "point"}], "]"}], "/", 
+    RowBox[{
+     RowBox[{"Norm", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"x", ",", "y", ",", "z"}], "}"}], "-", "point"}], "]"}], "^", 
+     "2"}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"restriction", "[", 
+    RowBox[{"point_", ",", "RadiusofRestriction_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"EuclideanDistance", "[", 
+     RowBox[{"point", ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "y", ",", "z"}], "}"}]}], "]"}], "<", 
+    "RadiusofRestriction"}]}], ";"}], "\n", 
+ RowBox[{"Animate", "[", 
+  RowBox[{
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"VectorPlot3D", "[", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"restriction", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"1", ",", "1", ",", "u"}], "}"}], ",", "4"}], "]"}], "||", 
+          RowBox[{"restriction", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"3", ",", "u", ",", "2"}], "}"}], ",", "4"}], "]"}], "||", 
+          RowBox[{"restriction", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"-", "u"}], ",", "4", ",", "4"}], "}"}], ",", "4"}], 
+           "]"}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+         RowBox[{
+          RowBox[{"electricfield", "[", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "1", ",", "u"}], "}"}], "]"}], "+", 
+          RowBox[{"electricfield", "[", 
+           RowBox[{"{", 
+            RowBox[{"3", ",", "u", ",", "2"}], "}"}], "]"}], "-", 
+          RowBox[{"electricfield", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "u"}], ",", "4", ",", "4"}], "}"}], "]"}]}]}], 
+        "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", 
+         RowBox[{"-", "11"}], ",", "11"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"y", ",", 
+         RowBox[{"-", "11"}], ",", "11"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"z", ",", 
+         RowBox[{"-", "11"}], ",", "11"}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+       RowBox[{"VectorPoints", "\[Rule]", "16"}], ",", 
+       RowBox[{"PlotRangePadding", "\[Rule]", "None"}], ",", 
+       RowBox[{"VectorStyle", "\[Rule]", "s"}]}], "]"}], ",", 
+     RowBox[{"Graphics3D", "[", 
+      RowBox[{"{", 
+       RowBox[{"Orange", ",", 
+        RowBox[{"Ball", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"1", ",", "1", ",", "u"}], "}"}], ",", ".3"}], "]"}]}], 
+       "}"}], "]"}], ",", 
+     RowBox[{"Graphics3D", "[", 
+      RowBox[{"{", 
+       RowBox[{"Blue", ",", 
+        RowBox[{"Ball", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "u"}], ",", "4", ",", "4"}], "}"}], ",", ".3"}], 
+         "]"}]}], "}"}], "]"}], ",", 
+     RowBox[{"Graphics3D", "[", 
+      RowBox[{"{", 
+       RowBox[{"Orange", ",", 
+        RowBox[{"Ball", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"3", ",", "u", ",", "2"}], "}"}], ",", ".3"}], "]"}]}], 
+       "}"}], "]"}], ",", 
+     RowBox[{"BoxRatios", "\[Rule]", "Automatic"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"u", ",", 
+     RowBox[{"-", "9"}], ",", "9", ",", "1"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6422904839907017`*^9, 3.642290484018204*^9}}]
+},
+WindowSize->{1350, 686},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3636, 104, 152, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

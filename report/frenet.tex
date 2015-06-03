@@ -2,7 +2,7 @@
 
 \subsection*{Overview}
 
-The Frenet frame is a tool for understanding the local motion of a curve. The Frenet-Serret frame gives you an idea of where the function would be going if it were a straight line (tangent vector), which way the function would be bending if it were a circle (normal vector), and which way the function is twisting (binormal vector). Additional quantities like the curvature (related to the radius of the function if it were a circle) and the torsion (related to the angular momentum in the direction of the binormal vector). This visualization renders a video which shows the Frenet-Serret frame moving along a path.
+The Frenet frame is a tool for understanding the local motion of a curve. The Frenet-Serret frame gives you an idea of where the function would be going if it were a straight line (tangent vector), which way the function would be bending if it were a circle (normal vector), and which way the function is twisting (binormal vector). Additional quantities like the curvature (related to the radius of the function if it were a circle) and the torsion (related to the angular momentum in the direction of the binormal vector). This visualization renders a video which shows the Frenet-Serret frame moving along a path. \cite{frenet1} \cite{frenet2} \cite{frenet3}
 
 \subsection*{Theoretical basis}
 
@@ -30,11 +30,11 @@ The input should be a regular path in real space. \(c(t) : [a, b] \to \mathrm R^
 
 \subsection*{Implementation details}
 
-There are multiple ways the Wolfram Language can compute derivatives. The first is \href{https://reference.wolfram.com/language/ref/D.html}{symbolically computing the derivative}. This calculates the answer using the variables. \(\frac{d}{dx}(3x^2)\) could be written \verb+D[3x^2, x]+ which evaluates to \verb+6x+. This expression can later be evaluated with a specific \verb+x+ for a numeric answer. The second is \href{http://reference.wolfram.com/language/NumericalCalculus/ref/ND.html}{numerically computing the derivative}. This method uses a very small change in the independent variable. \(\frac{d}{dx}(3x^2\mid_{x=5})\) could be written \verb+ND[3x^2, x, 5]+ evaluates to \verb+30+. There are functions like the absolute value which don't have symbolic derivatives, but do have numeric derivatives. It is also about ten times faster. Therefore, for this program I used the numeric derivative.
+There are multiple ways the Wolfram Language can compute derivatives. The first is \href{https://reference.wolfram.com/language/ref/D.html}{symbolically computing the derivative}. This calculates the answer using the variables. \(\frac{\dif}{\dif x}(3x^2)\) could be written \verb+D[3x^2, x]+ which evaluates to \verb+6x+. This expression can later be evaluated with a specific \verb+x+ for a numeric answer. The second is \href{http://reference.wolfram.com/language/NumericalCalculus/ref/ND.html}{numerically computing the derivative}. This method uses a very small change in the independent variable. \(\frac{\dif}{\dif x}(3x^2\mid_{x=5})\) could be written \verb+ND[3x^2, x, 5]+ evaluates to \verb+30+. There are functions like the absolute value which don't have symbolic derivatives, but do have numeric derivatives. It is also about ten times faster. Therefore, for this program I used the numeric derivative.
 
 All of the important quantities are given as a function of \verb+t+. This is because it makes animation easier if arbitrary inputs can be supplied. First the user enters a path as a function of \verb+t+. Then the tangent vector (based on the path), the normal vector (based on the tangent vector), and the binormal vector (based on the tangent and normal vectors) are calculated as described in previous subsection. The curvature is calculated based on the tangent vector, as described in the previous subsection.
 
-After that each quantity described above must be rendered as a 3D-graphic. The output is put into a single frame. Outputs from different points along the path are put into a list. That list gets animated by the built-in \href{https://reference.wolfram.com/language/ref/ListAnimate.html}{\verb+ListAnimate+}.
+After that each quantity described above must be rendered as a 3D-graphic. The output is put into a single frame. Outputs from different points along the path are put into a list. That list gets animated by the built-in \href{https://reference.wolfram.com/language/ref/ListAnimate.html}{ListAnimate}.
 
 \subsection*{Usage notes}
 
@@ -47,4 +47,3 @@ This program could be used to create a video demonstrating the Frenet-Serret fra
 \item Evaluate each cell until you hit the bottom with Shift+Enter. It may take up to twenty minutes to render the video.
 \item When completed, the Wolfram Language should display a file name in the last cell. The video is located there.
 \end{enumerate}
-
