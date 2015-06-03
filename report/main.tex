@@ -12,10 +12,14 @@
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
 \usepackage{minted}
 \usepackage{isodate}
+\usepackage{hyperref}
+
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
 \fancyhead[HR]{\thepage\ of \pageref{LastPage}}
+\DeclareMathSizes{12}{13}{8}{8} 
+\DeclareMathOperator{\divf}{div}
 
 \begin{document}
 
@@ -77,5 +81,7 @@ explaining how they work and what they do.
 \end{itemize}
 
 \input{frenet.tex}
+
+\input{divergence.tex}
 
 \end{document}

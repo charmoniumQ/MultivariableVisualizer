@@ -1,6 +1,10 @@
 \section{Frenet-Serret frames}
 
-The Frenet frame is a tool for understanding the local motion of a curve. The Frenet frame gives you an idea of where the function would be going if it were a straight line (tangent vector), which way the function would be bending if it were a circle (normal vector), and which way the function is twisting (binormal vector). Additional quantities like the curvature (related to the radius of the function if it were a circle) and the torsion (related to the angular momentum in the direction of the binormal vector).
+\subsection*{Overview}
+
+The Frenet frame is a tool for understanding the local motion of a curve. The Frenet-Serret frame gives you an idea of where the function would be going if it were a straight line (tangent vector), which way the function would be bending if it were a circle (normal vector), and which way the function is twisting (binormal vector). Additional quantities like the curvature (related to the radius of the function if it were a circle) and the torsion (related to the angular momentum in the direction of the binormal vector). This visualization renders a video which shows the Frenet-Serret frame moving along a path.
+
+\subsection*{Theoretical basis}
 
 The input should be a regular path in real space. \(c(t) : [a, b] \to \mathrm R^3\).
 
@@ -14,8 +18,33 @@ The input should be a regular path in real space. \(c(t) : [a, b] \to \mathrm R^
 
 \item Calculate the unit normal vector. Let \(c(t)\) be approximated by a circle of radius \(r\) lying in the plane spanned by \(T(0)\) and \(N(0)\) (this vector is not yet known). \(c(t) \approx r T(0) \sin t + r N(0) \cos t\). Then \(c'(t) = r T(0) \cos t - r N(0) \sin t\) (the reader can verify that at \(t = 0\), the tangent vector is indeed \(T(0)\)). Then \(c''(t) = T'(t) = - r T(0) \sin t - r N(0) \cos t\). Therefore \(T'(0) = -rN(0)\) which points in the direction of the normal vector. Therefore the unit-normalized normal vector is given by \(N(t) = \frac{T'(t)}{\|T'(t)\|}\). % TODO: get rid of negative sign
 
-\item Calculate the curvature. \(\kappa(t) = \frac{1}{r}\) in the circle described by \(c(t) \approx r T(0) \sin t + r N(0) \cos t\). As previously shown, \(T'(0) = -r N(0)\). Therefore
+\item Calculate the curvature. \(\kappa(t) = \frac{1}{r}\) in the circle described by \(c(t) \approx r T(0) \sin t + r N(0) \cos t\). As previously shown, \(T'(0) = -r N(0)\). Therefore \(\frac{1}{\|T'(0)\|}\) gives the curvature.
+
+% TODO: explain torsion
 
 \item Calculate the binormal vector. In order to form an orthnormal basis, \(B(t) = T(t) \times N(t)\).
 
+%\item Additionally, the Darboux vector can be computed. The Darboux vector is the angular velocity vector. The rate of rotation going from one vector to another is the cross-product between the vectors divided by the time it took to rotate. Therefore % TODO: complete this
+
 \end{enumerate}
+
+\subsection*{Implementation details}
+
+There are multiple ways the Wolfram Language can compute derivatives. The first is \href{https://reference.wolfram.com/language/ref/D.html}{symbolically computing the derivative}. This calculates the answer using the variables. \(\frac{d}{dx}(3x^2)\) could be written \verb+D[3x^2, x]+ which evaluates to \verb+6x+. This expression can later be evaluated with a specific \verb+x+ for a numeric answer. The second is \href{http://reference.wolfram.com/language/NumericalCalculus/ref/ND.html}{numerically computing the derivative}. This method uses a very small change in the independent variable. \(\frac{d}{dx}(3x^2\mid_{x=5})\) could be written \verb+ND[3x^2, x, 5]+ evaluates to \verb+30+. There are functions like the absolute value which don't have symbolic derivatives, but do have numeric derivatives. It is also about ten times faster. Therefore, for this program I used the numeric derivative.
+
+All of the important quantities are given as a function of \verb+t+. This is because it makes animation easier if arbitrary inputs can be supplied. First the user enters a path as a function of \verb+t+. Then the tangent vector (based on the path), the normal vector (based on the tangent vector), and the binormal vector (based on the tangent and normal vectors) are calculated as described in previous subsection. The curvature is calculated based on the tangent vector, as described in the previous subsection.
+
+After that each quantity described above must be rendered as a 3D-graphic. The output is put into a single frame. Outputs from different points along the path are put into a list. That list gets animated by the built-in \href{https://reference.wolfram.com/language/ref/ListAnimate.html}{\verb+ListAnimate+}.
+
+\subsection*{Usage notes}
+
+This program could be used to create a video demonstrating the Frenet-Serret frames in preparation for a lecture (not real-time). This video could be displayed after slide 4 of lecture 6 (Motion in 3 space). It would provide a visualization for what the Frenet-Serret frame represents.
+
+\begin{enumerate}
+\item Change \verb+pathF[t_] = ...+ to be whatever path you want in terms of \verb+t+.
+\item Change \verb+tmin+ and \verb+tmax+ to span the domain of the path.
+\item Evaluate the cell with Shift+Enter. You should see a the path appear below. Tweak any of the above values if necessary.
+\item Evaluate each cell until you hit the bottom with Shift+Enter. It may take up to twenty minutes to render the video.
+\item When completed, the Wolfram Language should display a file name in the last cell. The video is located there.
+\end{enumerate}
+
