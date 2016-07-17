@@ -19,8 +19,10 @@
 \fancyhead{}
 \fancyfoot{}
 \fancyhead[HR]{\thepage\ of \pageref{LastPage}}
+
 \DeclareMathSizes{12}{13}{8}{8} 
 \DeclareMathOperator{\divf}{div}
+\DeclareMathOperator{\jac}{jac}
 
 \begin{document}
 
@@ -31,7 +33,7 @@
 \topskip0pt
 \vspace*{\fill}
 
-\includegraphics[width=3cm]{logo.png}~\\[1cm]
+\includegraphics[width=3cm]{logo.png}\\[1cm]
 
 \rule{\linewidth}{0.5mm}\\[0.5cm]
 
@@ -39,7 +41,7 @@
 
 \textsc{\large By Sam Grayson and Wilson Nguyen}\\[0.7cm]
 
-{\large \isodate Version 0.1} \\[0.7cm]
+{\large \isodate}
 
 \rule{\linewidth}{0.5mm}\\[1cm]
 
@@ -83,6 +85,12 @@ explaining how they work and what they do.
 
 \input{frenet.tex}
 
+\input{field.tex}
+
+\input{change.tex}
+
+\input{flux.tex}
+
 \input{divergence.tex}
 
 \section{Bibliography}
@@ -104,6 +112,20 @@ explaining how they work and what they do.
 \bibitem{divergence2}
   Duxbury, Phil. ``PHY481 - Lecture 2: Vector Calculus.'' \emph{Computational Physics for PHY481.} Michigan State University, 2009. \url{http://www.pa.msu.edu/~duxbury/courses/phy481/Fall2009/Lecture2.pdf}
 
+\bibitem{field6}
+  Azad, Kalid. ``Vector Calculus: Understanding the Gradient.'' BetterExplained.com. BetterExplained Inc, n.d. Web. 03 June 2015. \url{http://betterexplained.com/articles/vector-calculus-understanding-the-gradient/}
+
+\bibitem{flux7}
+  Nycamp, Duane Q. ``Introduction to a Sufrface Integral of a Vector Field.'' Mathinsight.org. Math Insight, n.d. Web. 03 June 2015. \url{http://mathinsight.org/surface_integral_vector_field_introduction}
+
+\bibitem{flux8}
+  Dawkins, Paul. ``Pauls Online Notes : Calculus III - Surface Integrals.'' Math.lamar.edu. Paul Dawkins, n.d. Web. 03 June 2015. \url{http://tutorial.math.lamar.edu/Classes/CalcIII/SurfaceIntegrals.aspx}
+
 \end{thebibliography}
 
 \end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

@@ -26,6 +26,20 @@ The actual vector arrows, if care is not taken, will be very large around the po
 
 \subsection*{Usage notes}
 
-This is intended to show students what divergence actually means. It doesn't just mean that the vector field is expanding, because in this vector field divergence is zero even though the arrows are going farther apart. The arrows are also getting smaller in length, which cancels out their expansion. The only divergence is caused by the point-charge itself, which has infinite divergence.
+This is intended to show students what divergence actually means. It doesn't just mean that the vector field is expanding, because in this vector field divergence is zero even though the arrows are going farther apart. The arrows are also getting smaller in length, which cancels out their expansion. The only divergence is caused by the point-charge itself, which has infinite divergence. This could be introduced at Lecture 34 Vector Fields and Curl after slide 7 which can give a more nuanced explanation to divergence.
 
-It can also show Gauss' Law. Since \(\iiint_S \divf \vec E \dif \vec V\) is simply the number of point-charges, the left-hand side of Gauss' Law simplifies to the total charge \(q_T\) in \(q_T = \iint_{\partial S} \vec E \cdot \dif \vec S\). Instead of taking a volume-integral of divergence, you can literally count the number of point charges (count up for positive charges and down for negative ones).
+It can also show Gauss' Law. Since \(\iiint_S \divf \vec E \dif \vec V\) is simply the number of point-charges, the left-hand side of Gauss' Law simplifies to the total charge \(q_T\) in \(q_T = \iint_{\partial S} \vec E \cdot \dif \vec S\). Instead of taking a volume-integral of divergence, you can literally count the number of point charges (count up for positive charges and down for negative ones). As such this animation could be revisited at Lecture 37 Gauss' Theorem as a motivating example before starting the presentation.
+
+\begin{enumerate}
+\item Set \verb+restriction[point_, radiusofrestriction_]+ to ignore the singularity.
+\item Adjust \verb+opacity+ for viewing prefrences. It changes the transparency of the bounding sphere. 
+\item Place point charges as a function of \verb+u+.
+\item Set the bounds of \verb+u+ to be suitable to the function.
+\end{enumerate}
+
+\includegraphics[height=16cm]{../exhibit/divergence.jpg}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:

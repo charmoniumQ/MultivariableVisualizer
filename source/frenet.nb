@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    157209,       2854]
-NotebookOptionsPosition[    156537,       2827]
-NotebookOutlinePosition[    156880,       2842]
-CellTagsIndexPosition[    156837,       2839]
+NotebookDataLength[    164285,       3044]
+NotebookOptionsPosition[    163423,       3010]
+NotebookOutlinePosition[    163766,       3025]
+CellTagsIndexPosition[    163723,       3022]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -31,22 +31,22 @@ Cell[BoxData[{
        RowBox[{"t", "^", "2"}]}], " ", "-", " ", "t"}], ",", " ", "t", ",", 
      " ", 
      RowBox[{"4", 
-      RowBox[{"t", "^", "3"}]}]}], "}"}]}], ";"}], "\n", 
- RowBox[{"ParametricPlot3D", "[", 
-  RowBox[{
-   RowBox[{"pathF", "[", "t", "]"}], ",", " ", 
-   RowBox[{"{", 
-    RowBox[{"t", ",", " ", "tmin", ",", " ", "tmax"}], "}"}]}], 
-  "]"}], "\[IndentingNewLine]", 
+      RowBox[{"t", "^", "3"}]}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"tmin", " ", "=", " ", 
    RowBox[{"-", ".5"}]}], ";"}], "\n", 
  RowBox[{
   RowBox[{"tmax", " ", "=", " ", ".5"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"fps", " ", "=", " ", "10"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"fps", " ", "=", " ", "5"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"duration", " ", "=", " ", "3"}], ";"}]}], "Input",
+  RowBox[{"duration", " ", "=", " ", "1"}], ";"}], "\n", 
+ RowBox[{"ParametricPlot3D", "[", 
+  RowBox[{
+   RowBox[{"pathF", "[", "t", "]"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", " ", "tmin", ",", " ", "tmax"}], "}"}]}], 
+  "]"}]}], "Input",
  CellChangeTimes->{{3.642241510013528*^9, 3.64224151004453*^9}, {
    3.642241706543769*^9, 3.642241711050027*^9}, {3.642242122009532*^9, 
    3.6422421507211742`*^9}, {3.6422422529570217`*^9, 
@@ -60,7 +60,8 @@ Cell[BoxData[{
    3.6422849410995617`*^9}, 3.6422857882342567`*^9, {3.642285847215047*^9, 
    3.642285856163639*^9}, {3.6422875968983526`*^9, 3.642287600671568*^9}, {
    3.6422878763761077`*^9, 3.642287881902424*^9}, 3.642288159941883*^9, {
-   3.642289407804801*^9, 3.6422895806849327`*^9}}],
+   3.642289407804801*^9, 3.6422895806849327`*^9}, {3.642290564319625*^9, 
+   3.642290570005954*^9}, {3.6422951290463963`*^9, 3.642295131989419*^9}}],
 
 Cell[BoxData[
  Graphics3DBox[{{}, {}, 
@@ -202,7 +203,6 @@ w/8BeH9ixA==
   Axes->True,
   DisplayFunction->Identity,
   FaceGridsStyle->Automatic,
-  ImageSize->{357.5790416240377, 308.81953668211247`},
   Method->{},
   PlotRange->{{-0.12499998573531146`, 
    0.999999938775511}, {-0.49999997959183673`, 
@@ -211,15 +211,12 @@ w/8BeH9ixA==
     Scaled[0.02], 
     Scaled[0.02], 
     Scaled[0.02]},
-  Ticks->{Automatic, Automatic, Automatic},
-  ViewPoint->{1.942256520183872, -1.471287219896133, 2.3479679568455674`},
-  ViewVertical->{0.20985002147199106`, -1.0761148797654538`, 
-   0.22774402825113377`}]], "Output",
+  Ticks->{Automatic, Automatic, Automatic}]], "Output",
  CellChangeTimes->{
-  3.642289432708824*^9, {3.6422894762178335`*^9, 3.642289581031455*^9}}]
+  3.642289432708824*^9, {3.6422894762178335`*^9, 3.642289581031455*^9}, {
+   3.642290559798356*^9, 3.6422905706349897`*^9}, 3.64229513230942*^9, 
+   3.6422954832262373`*^9}]
 }, Open  ]],
-
-Cell[CellGroupData[{
 
 Cell[BoxData[{
  RowBox[{
@@ -274,152 +271,6 @@ Cell[BoxData[{
        RowBox[{"t", "\[Rule]", "ti"}]}], "]"}], ",", " ", 
      RowBox[{"t", " ", "\[Element]", " ", "Reals"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"circleFN", "[", "ti_", "]"}], " ", "=", " ", 
-  RowBox[{"Simplify", "[", 
-   RowBox[{
-    RowBox[{
-     RowBox[{
-      RowBox[{"(", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"tangentFN", "[", "ti", "]"}], " ", "*", " ", 
-         RowBox[{"Sin", "[", 
-          RowBox[{"2", "\[Pi]", " ", "*", " ", "u"}], " ", "]"}]}], " ", "-", 
-        " ", 
-        RowBox[{
-         RowBox[{"normalFN", "[", "ti", "]"}], " ", "*", " ", 
-         RowBox[{"Cos", "[", 
-          RowBox[{"2", " ", "\[Pi]", " ", "*", " ", "u"}], "]"}]}]}], ")"}], 
-      " ", "/", " ", 
-      RowBox[{"\[Kappa]N", "[", "ti", "]"}]}], " ", "+", " ", 
-     RowBox[{"pathF", "[", "ti", "]"}], " ", "+", " ", 
-     RowBox[{
-      RowBox[{"normalFN", "[", "ti", "]"}], " ", "/", " ", 
-      RowBox[{"\[Kappa]N", "[", "ti", "]"}]}]}], ",", " ", 
-    RowBox[{"{", 
-     RowBox[{
-      RowBox[{"t", " ", "\[Element]", " ", "Reals"}], ",", " ", 
-      RowBox[{"u", " ", "\[Element]", " ", "Reals"}]}], "}"}]}], 
-   "]"}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"frameN", "[", "tin_", "]"}], " ", "=", " ", 
-  RowBox[{"With", "[", 
-   RowBox[{
-    RowBox[{"{", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"pathR", " ", "=", " ", 
-       RowBox[{"ParametricPlot3D", "[", 
-        RowBox[{
-         RowBox[{"pathF", "[", "t", "]"}], ",", " ", 
-         RowBox[{"{", 
-          RowBox[{"t", ",", " ", "tmin", ",", " ", "tmax"}], "}"}]}], "]"}]}],
-       ",", "\[IndentingNewLine]", 
-      RowBox[{"tangentR", " ", "=", " ", 
-       RowBox[{"Graphics3D", "[", 
-        RowBox[{"Translate", "[", 
-         RowBox[{
-          RowBox[{"Arrow", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"0", ",", " ", "0", ",", " ", "0"}], "}"}], ",", " ", 
-             RowBox[{"(", 
-              RowBox[{"tangentFN", "[", "tin", "]"}], ")"}]}], "}"}], "]"}], 
-          ",", " ", 
-          RowBox[{"pathF", "[", "tin", "]"}]}], "]"}], "]"}]}], ",", 
-      RowBox[{"normalR", " ", "=", " ", 
-       RowBox[{"Graphics3D", "[", 
-        RowBox[{"Translate", "[", 
-         RowBox[{
-          RowBox[{"Arrow", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"0", ",", " ", "0", ",", " ", "0"}], "}"}], ",", " ", 
-             RowBox[{"(", 
-              RowBox[{"normalFN", "[", "tin", "]"}], ")"}]}], "}"}], "]"}], 
-          ",", " ", 
-          RowBox[{"pathF", "[", "tin", "]"}]}], "]"}], "]"}]}], ",", 
-      "\[IndentingNewLine]", 
-      RowBox[{"binormalR", " ", "=", " ", 
-       RowBox[{"Graphics3D", "[", 
-        RowBox[{"Translate", "[", 
-         RowBox[{
-          RowBox[{"Arrow", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"0", ",", " ", "0", ",", " ", "0"}], "}"}], ",", " ", 
-             RowBox[{"(", 
-              RowBox[{"binormalFN", "[", "tin", "]"}], ")"}]}], "}"}], "]"}], 
-          ",", " ", 
-          RowBox[{"pathF", "[", "tin", "]"}]}], "]"}], "]"}]}], ",", 
-      "\[IndentingNewLine]", 
-      RowBox[{"circleR", " ", "=", " ", 
-       RowBox[{"ParametricPlot3D", "[", 
-        RowBox[{
-         RowBox[{"circleFN", "[", "tin", "]"}], ",", " ", 
-         RowBox[{"{", 
-          RowBox[{"u", ",", " ", "0", ",", " ", "1"}], "}"}], ",", " ", 
-         RowBox[{"PlotStyle", "\[Rule]", "Red"}]}], "]"}]}]}], "}"}], ",", 
-    "\[IndentingNewLine]", 
-    RowBox[{"Show", "[", 
-     RowBox[{
-     "pathR", ",", " ", "tangentR", ",", " ", "normalR", ",", " ", 
-      "binormalR", ",", " ", "circleR"}], "]"}]}], "]"}]}]}], "Input",
- CellChangeTimes->{{3.642286076333964*^9, 3.6422861281699343`*^9}, {
-  3.6422862852820797`*^9, 3.6422863288235793`*^9}, {3.6422863945563607`*^9, 
-  3.642286496685215*^9}, {3.642286579664986*^9, 3.642286655267322*^9}, {
-  3.6422866949796004`*^9, 3.6422867853347893`*^9}, {3.6422869101409793`*^9, 
-  3.642286923329734*^9}, {3.642286970342427*^9, 3.642286996832944*^9}, {
-  3.642287099053796*^9, 3.6422871214570866`*^9}, {3.6422876052238283`*^9, 
-  3.6422876306442842`*^9}, {3.6422884822762437`*^9, 3.6422885015853524`*^9}, {
-  3.642288995235148*^9, 3.642289020161586*^9}, {3.6422890811688128`*^9, 
-  3.6422891130946393`*^9}}],
-
-Cell[BoxData["$Aborted"], "Output",
- CellChangeTimes->{3.6422893937829385`*^9}],
-
-Cell[BoxData["$Aborted"], "Output",
- CellChangeTimes->{3.642289429139118*^9}]
-}, Open  ]],
-
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"Needs", "[", "\"\<NumericalCalculus`\>\"", "]"}], ";"}], "\n", 
- RowBox[{
-  RowBox[{
-   RowBox[{"tangentFN", "[", "ti_", "]"}], " ", ":=", " ", 
-   RowBox[{"Normalize", "[", 
-    RowBox[{"ND", "[", 
-     RowBox[{
-      RowBox[{"pathF", "[", "t", "]"}], ",", " ", "t", ",", " ", "ti"}], 
-     "]"}], "]"}]}], ";"}], "\n", 
- RowBox[{
-  RowBox[{
-   RowBox[{"normalFN", "[", "ti_", "]"}], " ", ":=", " ", 
-   RowBox[{"Normalize", "[", 
-    RowBox[{"ND", "[", 
-     RowBox[{
-      RowBox[{"tangentFN", "[", "t", "]"}], ",", " ", "t", ",", " ", "ti"}], 
-     "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"binormalFN", "[", "ti_", "]"}], " ", ":=", " ", 
-   RowBox[{"Cross", "[", 
-    RowBox[{
-     RowBox[{"tangentFN", "[", "ti", "]"}], ",", " ", 
-     RowBox[{"normalFN", "[", "ti", "]"}]}], "]"}]}], 
-  ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"\[Kappa]N", "[", "ti_", "]"}], " ", ":=", " ", 
-   RowBox[{"Norm", "[", 
-    RowBox[{"ND", "[", 
-     RowBox[{
-      RowBox[{"tangentFN", "[", "t", "]"}], ",", " ", "t", ",", " ", "ti"}], 
-     "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"circleFS", "[", "ti_", "]"}], " ", ":=", " ", 
@@ -509,6 +360,314 @@ Cell[BoxData[{
      RowBox[{
      "pathR", ",", " ", "tangentR", ",", " ", "normalR", ",", " ", 
       "binormalR", ",", " ", "circleR"}], "]"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.642286076333964*^9, 3.6422861281699343`*^9}, {
+  3.6422862852820797`*^9, 3.6422863288235793`*^9}, {3.6422863945563607`*^9, 
+  3.642286496685215*^9}, {3.642286579664986*^9, 3.642286655267322*^9}, {
+  3.6422866949796004`*^9, 3.6422867853347893`*^9}, {3.6422869101409793`*^9, 
+  3.642286923329734*^9}, {3.642286970342427*^9, 3.642286996832944*^9}, {
+  3.642287099053796*^9, 3.6422871214570866`*^9}, {3.6422876052238283`*^9, 
+  3.6422876306442842`*^9}, {3.6422884822762437`*^9, 3.6422885015853524`*^9}, {
+  3.642288995235148*^9, 3.642289020161586*^9}, {3.6422890811688128`*^9, 
+  3.6422891130946393`*^9}, {3.642290713075712*^9, 3.6422907672788258`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"normalFS", "[", "1.1", "]"}]], "Input",
+ CellChangeTimes->{{3.6422913003577986`*^9, 3.642291312874939*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"223.39040000000006`", "\[VeryThinSpace]", "+", 
+     RowBox[{"11.560000000000002`", " ", 
+      RowBox[{
+       SuperscriptBox["Abs", "\[Prime]",
+        MultilineFunction->None], "[", 
+       RowBox[{"-", "3.4000000000000004`"}], "]"}]}], "-", 
+     RowBox[{"325.8288000000001`", " ", 
+      RowBox[{
+       SuperscriptBox["Abs", "\[Prime]",
+        MultilineFunction->None], "[", "1.1`", "]"}]}]}], 
+    SqrtBox[
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"Abs", "[", 
+        RowBox[{"223.39040000000006`", "\[VeryThinSpace]", "+", 
+         RowBox[{"11.560000000000002`", " ", 
+          RowBox[{
+           SuperscriptBox["Abs", "\[Prime]",
+            MultilineFunction->None], "[", 
+           RowBox[{"-", "3.4000000000000004`"}], "]"}]}], "-", 
+         RowBox[{"325.8288000000001`", " ", 
+          RowBox[{
+           SuperscriptBox["Abs", "\[Prime]",
+            MultilineFunction->None], "[", "1.1`", "]"}]}]}], "]"}], "2"], 
+      "+", 
+      RowBox[{"43.56000000000001`", " ", 
+       SuperscriptBox[
+        RowBox[{"Abs", "[", 
+         RowBox[{"223.39040000000006`", "\[VeryThinSpace]", "+", 
+          RowBox[{"7.480000000000001`", " ", 
+           RowBox[{
+            SuperscriptBox["Abs", "\[Prime]",
+             MultilineFunction->None], "[", 
+            RowBox[{"-", "3.4000000000000004`"}], "]"}]}], "-", 
+          RowBox[{"210.83040000000008`", " ", 
+           RowBox[{
+            SuperscriptBox["Abs", "\[Prime]",
+             MultilineFunction->None], "[", "1.1`", "]"}]}]}], "]"}], "2"]}], 
+      "+", 
+      SuperscriptBox[
+       RowBox[{"Abs", "[", 
+        RowBox[{
+         RowBox[{"3.4000000000000004`", " ", 
+          RowBox[{
+           SuperscriptBox["Abs", "\[Prime]",
+            MultilineFunction->None], "[", 
+           RowBox[{"-", "3.4000000000000004`"}], "]"}]}], "-", 
+         RowBox[{"95.83200000000002`", " ", 
+          RowBox[{
+           SuperscriptBox["Abs", "\[Prime]",
+            MultilineFunction->None], "[", "1.1`", "]"}]}]}], "]"}], "2"]}]]],
+    ",", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"3.4000000000000004`", " ", 
+      RowBox[{
+       SuperscriptBox["Abs", "\[Prime]",
+        MultilineFunction->None], "[", 
+       RowBox[{"-", "3.4000000000000004`"}], "]"}]}], "-", 
+     RowBox[{"95.83200000000002`", " ", 
+      RowBox[{
+       SuperscriptBox["Abs", "\[Prime]",
+        MultilineFunction->None], "[", "1.1`", "]"}]}]}], 
+    SqrtBox[
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"Abs", "[", 
+        RowBox[{"223.39040000000006`", "\[VeryThinSpace]", "+", 
+         RowBox[{"11.560000000000002`", " ", 
+          RowBox[{
+           SuperscriptBox["Abs", "\[Prime]",
+            MultilineFunction->None], "[", 
+           RowBox[{"-", "3.4000000000000004`"}], "]"}]}], "-", 
+         RowBox[{"325.8288000000001`", " ", 
+          RowBox[{
+           SuperscriptBox["Abs", "\[Prime]",
+            MultilineFunction->None], "[", "1.1`", "]"}]}]}], "]"}], "2"], 
+      "+", 
+      RowBox[{"43.56000000000001`", " ", 
+       SuperscriptBox[
+        RowBox[{"Abs", "[", 
+         RowBox[{"223.39040000000006`", "\[VeryThinSpace]", "+", 
+          RowBox[{"7.480000000000001`", " ", 
+           RowBox[{
+            SuperscriptBox["Abs", "\[Prime]",
+             MultilineFunction->None], "[", 
+            RowBox[{"-", "3.4000000000000004`"}], "]"}]}], "-", 
+          RowBox[{"210.83040000000008`", " ", 
+           RowBox[{
+            SuperscriptBox["Abs", "\[Prime]",
+             MultilineFunction->None], "[", "1.1`", "]"}]}]}], "]"}], "2"]}], 
+      "+", 
+      SuperscriptBox[
+       RowBox[{"Abs", "[", 
+        RowBox[{
+         RowBox[{"3.4000000000000004`", " ", 
+          RowBox[{
+           SuperscriptBox["Abs", "\[Prime]",
+            MultilineFunction->None], "[", 
+           RowBox[{"-", "3.4000000000000004`"}], "]"}]}], "-", 
+         RowBox[{"95.83200000000002`", " ", 
+          RowBox[{
+           SuperscriptBox["Abs", "\[Prime]",
+            MultilineFunction->None], "[", "1.1`", "]"}]}]}], "]"}], "2"]}]]],
+    ",", 
+   FractionBox[
+    RowBox[{"6.6000000000000005`", " ", 
+     RowBox[{"(", 
+      RowBox[{"223.39040000000006`", "\[VeryThinSpace]", "+", 
+       RowBox[{"7.480000000000001`", " ", 
+        RowBox[{
+         SuperscriptBox["Abs", "\[Prime]",
+          MultilineFunction->None], "[", 
+         RowBox[{"-", "3.4000000000000004`"}], "]"}]}], "-", 
+       RowBox[{"210.83040000000008`", " ", 
+        RowBox[{
+         SuperscriptBox["Abs", "\[Prime]",
+          MultilineFunction->None], "[", "1.1`", "]"}]}]}], ")"}]}], 
+    SqrtBox[
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"Abs", "[", 
+        RowBox[{"223.39040000000006`", "\[VeryThinSpace]", "+", 
+         RowBox[{"11.560000000000002`", " ", 
+          RowBox[{
+           SuperscriptBox["Abs", "\[Prime]",
+            MultilineFunction->None], "[", 
+           RowBox[{"-", "3.4000000000000004`"}], "]"}]}], "-", 
+         RowBox[{"325.8288000000001`", " ", 
+          RowBox[{
+           SuperscriptBox["Abs", "\[Prime]",
+            MultilineFunction->None], "[", "1.1`", "]"}]}]}], "]"}], "2"], 
+      "+", 
+      RowBox[{"43.56000000000001`", " ", 
+       SuperscriptBox[
+        RowBox[{"Abs", "[", 
+         RowBox[{"223.39040000000006`", "\[VeryThinSpace]", "+", 
+          RowBox[{"7.480000000000001`", " ", 
+           RowBox[{
+            SuperscriptBox["Abs", "\[Prime]",
+             MultilineFunction->None], "[", 
+            RowBox[{"-", "3.4000000000000004`"}], "]"}]}], "-", 
+          RowBox[{"210.83040000000008`", " ", 
+           RowBox[{
+            SuperscriptBox["Abs", "\[Prime]",
+             MultilineFunction->None], "[", "1.1`", "]"}]}]}], "]"}], "2"]}], 
+      "+", 
+      SuperscriptBox[
+       RowBox[{"Abs", "[", 
+        RowBox[{
+         RowBox[{"3.4000000000000004`", " ", 
+          RowBox[{
+           SuperscriptBox["Abs", "\[Prime]",
+            MultilineFunction->None], "[", 
+           RowBox[{"-", "3.4000000000000004`"}], "]"}]}], "-", 
+         RowBox[{"95.83200000000002`", " ", 
+          RowBox[{
+           SuperscriptBox["Abs", "\[Prime]",
+            MultilineFunction->None], "[", "1.1`", "]"}]}]}], "]"}], 
+       "2"]}]]]}], "}"}]], "Output",
+ CellChangeTimes->{{3.6422913088618927`*^9, 3.6422913131689434`*^9}, 
+   3.6422955019484973`*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Needs", "[", "\"\<NumericalCalculus`\>\"", "]"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"tangentFN", "[", "ti_", "]"}], " ", "=", " ", 
+   RowBox[{"Normalize", "[", 
+    RowBox[{"ND", "[", 
+     RowBox[{
+      RowBox[{"pathF", "[", "t", "]"}], ",", " ", "t", ",", " ", "ti"}], 
+     "]"}], "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"normalFN", "[", "ti_", "]"}], " ", "=", " ", 
+   RowBox[{"Normalize", "[", 
+    RowBox[{"ND", "[", 
+     RowBox[{
+      RowBox[{"tangentFN", "[", "t", "]"}], ",", " ", "t", ",", " ", "ti"}], 
+     "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"binormalFN", "[", "ti_", "]"}], " ", "=", " ", 
+   RowBox[{"Cross", "[", 
+    RowBox[{
+     RowBox[{"tangentFN", "[", "ti", "]"}], ",", " ", 
+     RowBox[{"normalFN", "[", "ti", "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"\[Kappa]N", "[", "ti_", "]"}], " ", "=", " ", 
+   RowBox[{"Norm", "[", 
+    RowBox[{"ND", "[", 
+     RowBox[{
+      RowBox[{"tangentFN", "[", "t", "]"}], ",", " ", "t", ",", " ", "ti"}], 
+     "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"circleFN", "[", "ti_", "]"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"tangentFS", "[", "ti", "]"}], " ", "*", " ", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"2", "\[Pi]", " ", "*", " ", "u"}], " ", "]"}]}], " ", "-", 
+       " ", 
+       RowBox[{
+        RowBox[{"normalFN", "[", "ti", "]"}], " ", "*", " ", 
+        RowBox[{"Cos", "[", 
+         RowBox[{"2", " ", "\[Pi]", " ", "*", " ", "u"}], "]"}]}]}], ")"}], 
+     " ", "/", " ", 
+     RowBox[{"\[Kappa]N", "[", "ti", "]"}]}], " ", "+", " ", 
+    RowBox[{"pathF", "[", "ti", "]"}], " ", "+", " ", 
+    RowBox[{
+     RowBox[{"normalFN", "[", "ti", "]"}], " ", "/", " ", 
+     RowBox[{"\[Kappa]N", "[", "ti", "]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"frameN", "[", "tin_", "]"}], " ", ":=", " ", 
+  RowBox[{"With", "[", 
+   RowBox[{
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"pathR", " ", "=", " ", 
+       RowBox[{"ParametricPlot3D", "[", 
+        RowBox[{
+         RowBox[{"pathF", "[", "t", "]"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"t", ",", " ", "tmin", ",", " ", "tmax"}], "}"}]}], "]"}]}],
+       ",", "\[IndentingNewLine]", 
+      RowBox[{"tangentR", " ", "=", " ", 
+       RowBox[{"Graphics3D", "[", 
+        RowBox[{"Translate", "[", 
+         RowBox[{
+          RowBox[{"Arrow", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", " ", "0", ",", " ", "0"}], "}"}], ",", " ", 
+             RowBox[{"(", 
+              RowBox[{"tangentFN", "[", "tin", "]"}], ")"}]}], "}"}], "]"}], 
+          ",", " ", 
+          RowBox[{"pathF", "[", "tin", "]"}]}], "]"}], "]"}]}], ",", 
+      RowBox[{"normalR", " ", "=", " ", 
+       RowBox[{"Graphics3D", "[", 
+        RowBox[{"Translate", "[", 
+         RowBox[{
+          RowBox[{"Arrow", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", " ", "0", ",", " ", "0"}], "}"}], ",", " ", 
+             RowBox[{"(", 
+              RowBox[{"normalFN", "[", "tin", "]"}], ")"}]}], "}"}], "]"}], 
+          ",", " ", 
+          RowBox[{"pathF", "[", "tin", "]"}]}], "]"}], "]"}]}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"binormalR", " ", "=", " ", 
+       RowBox[{"Graphics3D", "[", 
+        RowBox[{"Translate", "[", 
+         RowBox[{
+          RowBox[{"Arrow", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", " ", "0", ",", " ", "0"}], "}"}], ",", " ", 
+             RowBox[{"(", 
+              RowBox[{"binormalFN", "[", "tin", "]"}], ")"}]}], "}"}], "]"}], 
+          ",", " ", 
+          RowBox[{"pathF", "[", "tin", "]"}]}], "]"}], "]"}]}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"circleR", " ", "=", " ", 
+       RowBox[{"ParametricPlot3D", "[", 
+        RowBox[{
+         RowBox[{"circleFN", "[", "tin", "]"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{"u", ",", " ", "0", ",", " ", "1"}], "}"}], ",", " ", 
+         RowBox[{"PlotStyle", "\[Rule]", "Red"}]}], "]"}]}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Show", "[", 
+     RowBox[{
+     "pathR", ",", " ", "tangentR", ",", " ", "normalR", ",", " ", 
+      "binormalR", ",", " ", "circleR"}], "]"}]}], "]"}]}]}], "Input",
  CellChangeTimes->{
   3.6422415540490465`*^9, {3.6422416786661744`*^9, 3.6422417825951185`*^9}, {
    3.642242127723859*^9, 3.642242135329294*^9}, {3.642273679453887*^9, 
@@ -550,14 +709,32 @@ Cell[BoxData[{
    3.6422869325502605`*^9}, {3.642286982417119*^9, 3.642286994356802*^9}, {
    3.642287507820019*^9, 3.642287512353278*^9}, {3.642287618390583*^9, 
    3.6422876241009097`*^9}, {3.642288258589769*^9, 3.6422882586897745`*^9}, {
-   3.642288348642136*^9, 3.6422883553425193`*^9}, 3.642288439616685*^9}],
+   3.642288348642136*^9, 3.6422883553425193`*^9}, 3.642288439616685*^9, {
+   3.6422907407963066`*^9, 3.6422907634706078`*^9}, {3.642291346014347*^9, 
+   3.6422913915618515`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"binormalFN", "[", 
+  RowBox[{"-", "0.5"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6422924645665884`*^9, 3.6422924971009054`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"binormalFN", "[", 
+  RowBox[{"-", "0.5`"}], "]"}]], "Output",
+ CellChangeTimes->{{3.6422924685396194`*^9, 3.642292505573044*^9}, {
+  3.642295464670427*^9, 3.6422954780268683`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"frames", " ", "=", " ", 
   RowBox[{
    RowBox[{"Table", "[", 
     RowBox[{
-     RowBox[{"frameS", "[", "tf", "]"}], ",", " ", 
+     RowBox[{"frameN", "[", "tf", "]"}], ",", " ", 
      RowBox[{"{", 
       RowBox[{"tf", ",", " ", "tmin", ",", " ", "tmax", ",", " ", 
        RowBox[{
@@ -570,7 +747,13 @@ Cell[BoxData[
    3.642287552816616*^9, 3.6422875594030056`*^9}, {3.642287650912445*^9, 
    3.642287651149458*^9}, {3.642287865544473*^9, 3.642287904850753*^9}, 
    3.64228820165329*^9, {3.6422882525694246`*^9, 3.6422882531434574`*^9}, {
-   3.642288806419433*^9, 3.6422888142078896`*^9}}],
+   3.642288806419433*^9, 3.6422888142078896`*^9}, {3.6422913356631927`*^9, 
+   3.64229133784822*^9}}],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{3.642290793340522*^9, 3.642291338351226*^9, 
+  3.6422951206833334`*^9, 3.6422954568640695`*^9}]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
@@ -581,7 +764,7 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`i6$$ = 1, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`i6$$ = 3, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {
     "\"min\"" :> {$CellContext`i6$$ = 1}, 
      "\"max\"" :> {$CellContext`i6$$ = 6}}, Typeset`bookmarkMode$$ = "Menu", 
@@ -601,8 +784,8 @@ Cell[BoxData[
                 {"\<\"\"\>", 
                  AnimatorBox[Dynamic[$CellContext`i6$$], {1, 6, 1},
                   AnimationRate->Automatic,
-                  AnimationRunTime->1863.1438446044922`,
-                  AnimationTimeIndex->0.3673224448939436,
+                  AnimationRunTime->7622.343044757843,
+                  AnimationTimeIndex->2.3430447578430176`,
                   
                   AppearanceElements->{
                    "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons",
@@ -2842,19 +3025,26 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 1821, 40, 132, "Input"],
-Cell[2404, 64, 8843, 154, 324, "Output"]
+Cell[580, 22, 1918, 41, 132, "Input"],
+Cell[2501, 65, 8726, 152, 400, "Output"]
+}, Open  ]],
+Cell[11242, 220, 5824, 150, 252, "Input"],
+Cell[CellGroupData[{
+Cell[17091, 374, 131, 2, 31, "Input"],
+Cell[17225, 378, 6367, 165, 158, "Output"]
+}, Open  ]],
+Cell[23607, 546, 7698, 167, 272, "Input"],
+Cell[CellGroupData[{
+Cell[31330, 717, 153, 3, 31, "Input"],
+Cell[31486, 722, 204, 4, 31, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11284, 223, 5995, 155, 252, "Input"],
-Cell[17282, 380, 79, 1, 31, "Output"],
-Cell[17364, 383, 77, 1, 31, "Output"]
+Cell[31727, 731, 896, 19, 31, "Input"],
+Cell[32626, 752, 150, 2, 31, "Output"]
 }, Open  ]],
-Cell[17456, 387, 7597, 165, 272, "Input"],
-Cell[25056, 554, 845, 18, 31, "Input"],
 Cell[CellGroupData[{
-Cell[25926, 576, 139, 2, 31, "Input"],
-Cell[26068, 580, 130453, 2244, 380, "Output"]
+Cell[32813, 759, 139, 2, 31, "Input"],
+Cell[32955, 763, 130452, 2244, 380, "Output"]
 }, Open  ]]
 }
 ]
